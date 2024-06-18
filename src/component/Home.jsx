@@ -1,4 +1,5 @@
 import React from 'react'
+import { VITE_LIVE_SCROLLING_SPEED, VITE_START_HOUR } from '../config'
 
 const Home = () => {
   return (
