@@ -11,5 +11,5 @@ RUN npm run build
 
 FROM ${RUNTIME_IMAGE} as production 
 COPY --from=builder /app/dist /usr/local/apache2/htdocs/envproject
-EXPOSE 8080
+EXPOSE 3000
 CMD ["httpd-foreground"]
