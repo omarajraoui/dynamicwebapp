@@ -1,0 +1,17 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: dwrsvam-configmap
+  namespace: ods24-vam
+  uid: 8bcd50e9-2384-42fa-a34f-95f5e247d672
+  resourceVersion: '1457897022'
+  creationTimestamp: '2024-02-08T13:51:11Z'
+data:
+  VITE_ADDITIONAL_NEXT_DAY_HOURS: '6'
+  VITE_API_DOMAIN: 'https://wrs.paris2024.org/'
+  VITE_CAM_INTERVAL: '180000'
+  VITE_CONCAT_ORDER: Discipline-Venue
+  VITE_LIVE_SCROLLING_SPEED: '2'
+  VITE_NUMBER_OF_HOURS: '16'
+  VITE_START_HOUR: '8'
+  VITE_VAM_INTERVAL: '180000'

@@ -1,0 +1,64 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: dwrsvam-service
+  namespace: ods24-vam
+  uid: 43c58210-fcc7-48e7-8c8e-c84109a4a769
+  resourceVersion: '1312812312'
+  creationTimestamp: '2024-02-08T13:39:14Z'
+  labels:
+    app.kubernetes.io/instance: dwrsvam
+    app.kubernetes.io/name: dwrsvam
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
+  managedFields:
+    - manager: Mozilla
+      operation: Update
+      apiVersion: v1
+      time: '2024-02-08T13:39:14Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:kubernetes.io/ingress.class': {}
+            'f:nginx.ingress.kubernetes.io/ssl-redirect': {}
+          'f:labels':
+            .: {}
+            'f:app.kubernetes.io/instance': {}
+            'f:app.kubernetes.io/name': {}
+        'f:spec':
+          'f:internalTrafficPolicy': {}
+          'f:ipFamilies': {}
+          'f:ipFamilyPolicy': {}
+          'f:ports':
+            .: {}
+            'k:{"port":80,"protocol":"TCP"}':
+              .: {}
+              'f:name': {}
+              'f:port': {}
+              'f:protocol': {}
+              'f:targetPort': {}
+          'f:selector': {}
+          'f:sessionAffinity': {}
+          'f:type': {}
+spec:
+  clusterIP: 172.30.86.195
+  ipFamilies:
+    - IPv4
+  ports:
+    - name: access
+      protocol: TCP
+      port: 80
+      targetPort: 8080
+  internalTrafficPolicy: Cluster
+  clusterIPs:
+    - 172.30.86.195
+  type: ClusterIP
+  ipFamilyPolicy: SingleStack
+  sessionAffinity: None
+  selector:
+    app.kubernetes.io/name: dwrsvam
+status:
+  loadBalancer: {}

@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my_application
+  namespace: my_namespace
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: my_application
+      app.kubernetes.io/component: fe
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        ci-last-build: 2021-09-13_08:34:12
+        ci-last-commit: d32d4f52af8bbf15ce977ce0a553fba1088fc9a2
+        hash: "5"
+      labels:
+        app: my_application
+        app.kubernetes.io/component: fe
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: spring-config
+        image: my_application:0.0.2
+        imagePullPolicy: Always
+        name: my_application
+        ports:
+        - containerPort: 8080
+          name: http
+        resources:
+          limits:
+            cpu: "0.6"
+            memory: 1.0Gi
+          requests:
+            cpu: "0.2"
+            memory: 0.5Gi
+        volumeMounts:
+        - mountPath: /usr/local/apache2/htdocs/my_application/config.js
+          name: config-js
+          subPath: config.js
+        - mountPath: /usr/local/apache2/conf/httpd.conf
+          name: apache-config
+          subPath: httpd.conf
+      volumes:
+      - configMap:
+          name: my_application-config-js
+        name: config-js
+      - configMap:
+          name: apache-config
+        name: apache-config
