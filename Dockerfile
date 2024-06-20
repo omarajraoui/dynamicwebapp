@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Use an Nginx base image for serving static files
-FROM nginx:1.26
+FROM nginx:latest
 
 # Copy the build output from the previous stage
 COPY --from=build /app/dist /usr/share/nginx/html
