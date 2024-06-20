@@ -1,0 +1,6 @@
+window.VITE_START_HOUR = '6';
+window.VITE_ADDITIONAL_NEXT_DAY_HOURS = '18';
+window.VITE_API_DOMAIN = 'link.com';
+window.VITE_VAM_INTERVAL =  '10000';
+window.VITE_CAM_INTERVAL = '10000';
+window.VITE_LIVE_SCROLLING_SPEED = '2';
