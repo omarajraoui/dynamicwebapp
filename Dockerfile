@@ -1,5 +1,5 @@
 # Use a Node.js base image
-FROM node:14 AS build
+FROM node:lts AS build
 
 # Set working directory
 WORKDIR /app
