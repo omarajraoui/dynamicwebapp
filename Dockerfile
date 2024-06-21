@@ -33,7 +33,7 @@ COPY ./openresty/openresty.sh /usr/local/openresty/
 COPY nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
 
 # Copy the built React app
-COPY --from=builder /app/dist .
+COPY --from=build /app/dist .
 
 RUN mkdir -p /var/run/openresty/nginx-client-body; \
     mkdir -p /var/run/openresty/nginx-fastcgi; \
