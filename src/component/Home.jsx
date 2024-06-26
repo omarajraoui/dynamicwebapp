@@ -1,5 +1,5 @@
 import React from 'react'
-import { VITE_LIVE_SCROLLING_SPEED, VITE_START_HOUR, VITE_API_DOMAIN } from '../config'
+import { VITE_LIVE_SCROLLING_SPEED, VITE_START_HOUR, VITE_API_DOMAIN ,VITE_NUMBER_OF_HOURS , VITE_ADDITIONAL_NEXT_DAY_HOURS , VITE_CAM_INTERVAL , VITE_VAM_INTERVAL } from '../config'
 
 const Home = () => {
   return (
@@ -14,8 +14,29 @@ const Home = () => {
       start hour :{ VITE_START_HOUR}
       </p>
            <p className="read-the-docs">
-      start hour :{ VITE_API_DOMAIN}
+      domain  :{ VITE_API_DOMAIN}
       </p>
+
+           </p>
+      <p className="read-the-docs">
+      domain  :{ VITE_NUMBER_OF_HOURS}
+      </p>
+
+      </p>
+           <p className="read-the-docs">
+      domain  :{ VITE_VAM_INTERVAL}
+      </p>
+
+        </p>
+           <p className="read-the-docs">
+      domain  :{  VITE_CAM_INTERVAL}
+      </p>
+
+        </p>
+           <p className="read-the-docs">
+      domain  :{ VITE_ADDITIONAL_NEXT_DAY_HOURS}
+      </p>
+        
 
       
     </div>
