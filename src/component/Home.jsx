@@ -19,22 +19,22 @@ const Home = () => {
 
            </p>
       <p className="read-the-docs">
-      domain  :{ VITE_NUMBER_OF_HOURS}
+      nmbr of hours  :{ VITE_NUMBER_OF_HOURS}
       </p>
 
       </p>
            <p className="read-the-docs">
-      domain  :{ VITE_VAM_INTERVAL}
-      </p>
-
-        </p>
-           <p className="read-the-docs">
-      domain  :{  VITE_CAM_INTERVAL}
+      vam interval  :{ VITE_VAM_INTERVAL}
       </p>
 
         </p>
            <p className="read-the-docs">
-      domain  :{ VITE_ADDITIONAL_NEXT_DAY_HOURS}
+      cam interval  :{  VITE_CAM_INTERVAL}
+      </p>
+
+        </p>
+           <p className="read-the-docs">
+      additional nxt day hours  :{ VITE_ADDITIONAL_NEXT_DAY_HOURS}
       </p>
         
 
