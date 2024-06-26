@@ -1,5 +1,5 @@
 import React from 'react'
-import { VITE_LIVE_SCROLLING_SPEED, VITE_START_HOUR } from '../config'
+import { VITE_LIVE_SCROLLING_SPEED, VITE_START_HOUR, VITE_API_DOMAIN } from '../config'
 
 const Home = () => {
   return (
@@ -12,6 +12,9 @@ const Home = () => {
 
       <p className="read-the-docs">
       start hour :{ VITE_START_HOUR}
+      </p>
+           <p className="read-the-docs">
+      start hour :{ VITE_API_DOMAIN}
       </p>
 
       
